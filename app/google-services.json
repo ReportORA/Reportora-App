@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "249540284938",
+    "project_id": "reportora-8af28",
+    "storage_bucket": "reportora-8af28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249540284938:android:1fc35a48b7ce89438545f3",
+        "android_client_info": {
+          "package_name": "com.example.reportora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVcwmrW7V1yhSw5LGmEK3q-C3uVgyfiyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
