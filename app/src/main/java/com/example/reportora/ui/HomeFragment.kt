@@ -38,6 +38,13 @@ class HomeFragment : Fragment(), FolderAdapter.OnItemClickListener {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_home, container, false)
 
+        val logoutButton = view.findViewById<Button>(R.id.logout_button)
+
+        logoutButton.setOnClickListener {
+            firebaseLogout()
+        }
+
+
         auth = Firebase.auth
         val currentUser = auth.currentUser
 
@@ -68,6 +75,11 @@ class HomeFragment : Fragment(), FolderAdapter.OnItemClickListener {
 
         fetchFoldersFromStorage()
 
+    }
+
+    private fun firebaseLogout() {
+        auth.signOut()
+        findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
     }
 
 

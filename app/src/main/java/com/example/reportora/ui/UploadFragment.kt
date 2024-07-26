@@ -30,6 +30,7 @@ class UploadFragment : Fragment() {
     private  lateinit var uploadUsername:TextInputEditText
     private  lateinit var downloadUsername:TextInputEditText
     private  lateinit var uploadYear:TextInputEditText
+    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreateView(
@@ -38,6 +39,7 @@ class UploadFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_upload, container, false)
+        auth = Firebase.auth
 
 
         uploadUsername =view.findViewById(R.id.report_upload)
@@ -46,6 +48,12 @@ class UploadFragment : Fragment() {
 
         val buttonSelectFile = view.findViewById<Button>(R.id.hospital_upload)
         val userReportButton = view.findViewById<Button>(R.id.hospital_download)
+
+        val logout = view.findViewById<Button>(R.id.upload_logout)
+
+        logout.setOnClickListener {
+            firebaseLogout()
+        }
 
         buttonSelectFile.setOnClickListener {
             pickFileLauncher.launch(intent)
@@ -57,6 +65,11 @@ class UploadFragment : Fragment() {
         }
 
         return view
+    }
+
+    private fun firebaseLogout() {
+        auth.signOut()
+        findNavController().navigate(R.id.action_uploadFragment_to_loginFragment)
     }
 
     private val pickFileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->

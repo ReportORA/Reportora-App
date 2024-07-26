@@ -81,8 +81,9 @@ class SignUpFragment : Fragment() {
                         database.reference.child("users").child(it)
                             .setValue(userMap)
                             .addOnSuccessListener {
-                                Toast.makeText(requireContext(), "Sign Up Successful.", Toast.LENGTH_SHORT).show()
-                                Navigation.findNavController(requireView()).navigate(R.id.action_signUpFragment_to_loginFragment)
+                                Toast.makeText(requireContext(), "Sign Up Successful , Please Login Now", Toast.LENGTH_SHORT).show()
+                                //Navigation.findNavController(requireView()).navigate(R.id.action_signUpFragment_to_loginFragment)
+
                             }
                             .addOnFailureListener { e ->
                                 Toast.makeText(requireContext(), "Error saving user info: ${e.message}", Toast.LENGTH_SHORT).show()
