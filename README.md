@@ -63,12 +63,8 @@ License:
 
 It's an Opensource project
 
-Contact:
 
-<nischitha0727@gmail.com>
 
 <umemantasmeiak@gmail.com>
 
-<gniveditha2004@gmail.com>
 
-<prrakshitha0929@gmail.com>
