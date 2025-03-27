@@ -64,7 +64,6 @@ License:
 It's an Opensource project
 
 
-
-<umemantasmeiak@gmail.com>
+<nischitha0727@gmail.com>
 
 
